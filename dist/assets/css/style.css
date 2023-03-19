@@ -1914,6 +1914,18 @@ section {
     transform: rotate(90deg);
 }
 
+@media screen and (max-width: 1080px) {
+    .survey__modal-close {
+        top: 10rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .survey__modal-close {
+        top: 15rem;
+    }
+}
+
 .survey .survey__submit {
     width: 100%;
     display: block;
