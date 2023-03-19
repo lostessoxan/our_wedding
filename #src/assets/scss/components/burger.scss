@@ -1,0 +1,40 @@
+:root {
+    --touch-width: 40px; 
+    --touch-height: 25px; 
+    --touch-item: 3px;
+    --touch-color: rgb(26, 26, 26);
+    --translate: calc(var(--touch-height) / 2 - var(--touch-item) / 2);
+}
+
+.touch {
+    width: var(--touch-width);
+    height: var(--touch-height);
+    flex-wrap: wrap;
+    align-content: space-between;
+    cursor: pointer;
+    display: none;
+
+    @media screen and (max-width: 1080px) {
+        display: flex;
+    }
+}
+
+.touch > div {
+    width: 100%;
+    height: var(--touch-item);
+    background: var(--touch-color);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.touch.active > div:nth-child(1) {
+    transform: translateY(var(--translate)) rotate(-45deg);
+}
+
+.touch.active > div:nth-child(3) {
+    transform: translateY(calc(var(--translate) * -1)) rotate(45deg);
+}
+
+.touch.active > div:nth-child(2) {
+    opacity: 0;
+}

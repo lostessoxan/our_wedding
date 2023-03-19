@@ -1,0 +1,106 @@
+.requests {
+    padding: 35px 0 5.625rem;
+    background: rgb(43, 43, 43);
+
+    &__line {
+        height: 2px;
+        width: 60px;
+        background: #fff;
+        align-self: center;
+    }
+
+    .prev {
+        text-align: center;
+        color: #fff;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 4.5rem;
+        margin-bottom: 4rem;
+        color: #fff;
+    }
+
+    &__row {
+        display: flex;
+        gap: 1rem;
+
+        @media screen and (max-width: 940px) {
+            flex-flow: column;
+            gap: 3rem;
+        }
+    }
+
+    &__item {
+        flex: 1 1 300px;
+        position: relative;
+        background: #eee;
+        border-radius: 5px;
+        padding: 2.5rem 1.2rem;
+
+        &:first-child {
+            animation: moveLeft 7s ease-in-out infinite;
+        }
+        &:last-child {
+            animation: moveRight 8s ease-in-out infinite;
+        }
+
+        @media screen and (max-width: 940px) {
+            margin: 0 auto;
+            width: 70%;
+        }
+
+        @media screen and (max-width: 500px) {
+            width: 94%;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50rem;
+        font-family: 'mr_HamiltoneG', 'Cormorant Garamond', sans-serif;
+        color: var(--color-primary);
+        filter: opacity(0.1);
+    }
+
+    &__text {
+        height: 100%;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 35px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+// ============================
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}

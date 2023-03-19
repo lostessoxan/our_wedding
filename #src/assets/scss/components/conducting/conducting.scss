@@ -1,0 +1,136 @@
+.conducting {
+    position: relative;
+    background: rgb(43, 43, 43);
+
+    .container {
+        display: flex;
+        gap: 2rem;
+
+        @media screen and (max-width: 694px) {
+            flex-flow: column;
+        }
+    }
+
+    &__text {
+        background: #eee;
+        flex: 1 1 300px;
+        display: flex;
+        flex-flow: column;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    &__sub-title {
+        font-size: 4.5rem;
+        color: var(--color-dark);
+        text-shadow: var(--t-shadow);
+        text-align: center;
+
+        i {
+            position: relative;
+            top: 7px;
+            color: var(--color-dark);
+        }
+    }
+
+    &__calendar {
+        position: relative;
+        img {
+
+            &:nth-child(2) {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .conducting__calendar-heart {
+            position: absolute;
+            top: 34%;
+            right: 13%;
+            width: 185px;
+            transform: rotate(10deg);
+            animation: heartScale 2s ease-in-out infinite;
+            filter: saturate(0);
+
+            @media screen and (max-width: 1200px) {
+                top: 33%;
+                right: 11%;
+                width: 170px;
+            }
+            @media screen and (max-width: 870px) {
+                right: 9%;
+                width: 160px;
+            }
+
+            @media screen and (max-width: 759px) {
+                width: 150px;
+            }
+            @media screen and (max-width: 694px) {
+                width: 32%;
+                right: 14%;
+                top: 34%;
+            }
+        }
+    }
+
+    &__img {
+        flex: 1 1 300px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        position: relative;
+        
+        @media screen and (max-width: 694px) {
+            flex: 1 1 450px;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // =======================
+
+    &__decoration-1 {
+        position: absolute;
+        bottom: -0.5rem;
+        z-index: 1;
+        right: 1rem;
+        width: 20rem;
+        filter: saturate(0);
+    }
+
+    &__decoration-2 {
+        transform: scale(-1) rotate(90deg);
+        filter: saturate(0);
+        position: absolute;
+        top: -20%;
+        right: 0;
+        width: 30%;
+        z-index: 0;
+
+        @media screen and (max-width: 1080px) {
+            top: -10%;
+        }
+        @media screen and (max-width: 694px) {
+            top: -5%;
+            opacity: 0.2;
+        }
+    }
+}
+
+@keyframes heartScale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

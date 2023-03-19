@@ -1,0 +1,120 @@
+.header {
+    background: rgb(255, 255, 255);
+    border-bottom: 1px solid var(--color-dark);
+    width: 100%;
+
+    @media screen and (max-width: 1080px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    &__logo {
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+        }
+    }
+
+    &__top {
+        padding: 16px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid var(--color-dark);
+
+        .touch {
+            margin-left: 7rem;
+        }
+    }
+
+    &__nav {
+        padding: 1rem 10%;
+
+        &.active {
+            background: rgb(255, 255, 255);
+            display: flex;
+            justify-content: stretch;
+            // align-items: center;
+            position: fixed;
+            padding: 0;
+            top: 132px;
+            left: 0;
+            width: 100%;
+            border-bottom: 1px solid var(--color-dark);
+            border-top: 1px solid var(--color-dark);
+            transition: all .3s ease;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            
+        
+            .header__first-line, .header__second-line{
+                display: flex;
+                flex-flow: column;
+                width: 100%;
+        
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding: 3rem; 
+
+
+                    &:hover {
+                        background: #eee;
+                        text-decoration: none;
+                    }
+                }
+            }
+        
+            .header__between-line {
+                display: none;
+            }
+        
+        }
+
+        @media screen and (max-width: 1080px) {
+            display: none;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            transition: all .3s ease;
+        }
+    }
+
+    &__first-line, &__second-line {
+        padding: 0.5rem 0;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        justify-items: center;
+        align-items: center;
+        
+        * {
+            margin-right: 1rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        
+        a {
+            display: block;
+            color: var(--color-dark);
+            font-size: 1.2rem;
+            position: relative;
+            transition: all .2s ease;
+            text-align: center;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__between-line {
+        display: block;
+        width: 55px;
+        background: url('./img/line.png');
+    }
+}
+
