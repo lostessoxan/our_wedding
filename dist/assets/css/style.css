@@ -175,7 +175,7 @@ section {
 .header {
     background: rgb(255, 255, 255);
     border-bottom: 1px solid var(--color-dark);
-    width: 100%;
+    width: 100vw;
 }
 
 @media screen and (max-width: 1080px) {
@@ -183,7 +183,8 @@ section {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        right: 0;
+        width: 100vw;
         z-index: 100;
     }
 }
