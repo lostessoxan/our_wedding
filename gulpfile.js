@@ -21,7 +21,7 @@ const { src, dest } = require('gulp'),
 
 // ============================================= PATH
 
-const srcPath = '#src/'
+const srcPath = 'src/'
 const distPath = 'dist/'
 
 const path = {
