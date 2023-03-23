@@ -564,6 +564,11 @@ section {
     }
 }
 
+.conducting__sub-desc {
+    font-size: 2rem;
+    color: rgb(62, 62, 62);
+}
+
 .conducting__text {
     background: #eee;
     flex: 1 1 300px;
