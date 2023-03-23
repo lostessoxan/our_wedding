@@ -2,6 +2,8 @@
 
 @import url(https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300italic,regular,italic,500,500italic,600,600italic,700,700italic);
 
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
 @font-face {
     font-family: "mr_HamiltoneG";
   src: url(../fonts/20094.woff2);
@@ -51,7 +53,7 @@
 }
 
 :root {
-    --color-primary: #0fc972;
+    --color-primary: #cab11f;
     --color-white: #fff;
     --color-light: #f4f4f4;
     --color-black: #000f37;
@@ -382,10 +384,10 @@ section {
 }
 
 .main__date {
-    color: var(--color-primary);
+    color: #e6c71b;
     font-size: 5.5rem;
     text-decoration: underline;
-    text-shadow: var(--t-shadow);
+    text-shadow: 0 -3px 20px rgba(0, 0, 0, 0.4);
     font-family: "Cormorant Garamond", Montserrat, sans-serif;
 }
 
@@ -446,6 +448,19 @@ section {
     position: relative;
 }
 
+.date__date-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: left;
+    object-position: left;
+    background-attachment: fixed;
+}
+
 .date .container {
     display: flex;
     gap: 4rem;
@@ -479,11 +494,19 @@ section {
 }
 
 .date__text {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    border: 1px solid #fff;
     display: flex;
     gap: 2rem;
     flex-flow: column;
     justify-content: center;
     flex: 1 1 300px;
+}
+
+.date .prev {
+    color: #fff;
 }
 
 .date__sub-title {
@@ -497,6 +520,7 @@ section {
     text-align: center;
     font-size: 1.4rem;
     line-height: 35px;
+    color: #fff;
 }
 
 .date__decoration-1 {
@@ -505,6 +529,7 @@ section {
     z-index: 1;
     left: 0;
     width: 20rem;
+    filter: saturate(0);
 }
 
 @media screen and (max-width: 692px) {
@@ -546,6 +571,7 @@ section {
     flex-flow: column;
     gap: 2rem;
     justify-content: center;
+    padding: 2rem;
 }
 
 .conducting__sub-title {
@@ -574,8 +600,8 @@ section {
 
 .conducting__calendar .conducting__calendar-heart {
     position: absolute;
-    top: 34%;
-    right: 13%;
+    top: 25%;
+    right: 22%;
     width: 185px;
     transform: rotate(10deg);
     animation: heartScale 2s ease-in-out infinite;
@@ -584,30 +610,31 @@ section {
 
 @media screen and (max-width: 1200px) {
     .conducting__calendar .conducting__calendar-heart {
-        top: 33%;
-        right: 11%;
-        width: 170px;
-    }
-}
-
-@media screen and (max-width: 870px) {
-    .conducting__calendar .conducting__calendar-heart {
-        right: 9%;
+        top: 23%;
+        right: 19%;
         width: 160px;
     }
 }
 
-@media screen and (max-width: 759px) {
+@media screen and (max-width: 890px) {
     .conducting__calendar .conducting__calendar-heart {
-        width: 150px;
+        right: 20%;
+        top: 24%;
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 798px) {
+    .conducting__calendar .conducting__calendar-heart {
+        width: 120px;
     }
 }
 
 @media screen and (max-width: 694px) {
     .conducting__calendar .conducting__calendar-heart {
         width: 32%;
-        right: 14%;
-        top: 34%;
+        right: 23%;
+        top: 26%;
     }
 }
 
@@ -681,6 +708,7 @@ section {
 /* =================================================== place */
 .place {
     position: relative;
+    background: rgb(26, 26, 26);
 }
 
 .place__container {
@@ -726,12 +754,12 @@ section {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent 50%, rgb(255, 242, 218));
+    background: linear-gradient(90deg, transparent 50%, rgb(26, 26, 26));
 }
 
 @media screen and (max-width: 1650px) {
     .place__img:first-child::after {
-        background: linear-gradient(90deg, transparent 60%, rgb(255, 242, 218));
+        background: linear-gradient(90deg, transparent 60%, rgb(26, 26, 26));
     }
 }
 
@@ -751,7 +779,7 @@ section {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(-90deg, transparent 50%, rgb(255, 242, 218));
+    background: linear-gradient(-90deg, transparent 50%, rgb(26, 26, 26));
 }
 
 @media screen and (max-width: 1282px) {
@@ -787,12 +815,13 @@ section {
 
 .place__text {
     flex: 0 1 200px;
-    border: 5px solid var(--color-dark);
+    border: 5px solid #fff;
     border-radius: 10px;
     padding: 2rem;
     display: flex;
     flex-flow: column;
     gap: 2rem;
+    color: #fff;
     text-align: center;
 }
 
@@ -818,8 +847,8 @@ section {
 .place__sub-title {
     white-space: nowrap;
     font-size: 4rem;
-    color: var(--color-dark);
-    text-shadow: var(--t-shadow);
+    color: #fff;
+    text-shadow: 0 0 20px #000;
 }
 
 .place__desc {
@@ -846,12 +875,36 @@ section {
 
 .place__btn:hover {
     background: none;
-    color: var(--color-dark);
+    border-color: #fff;
+    color: #fff;
+}
+
+.place__decoration-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 30rem;
+    filter: invert(0.2);
+}
+
+@media screen and (max-width: 1277px) {
+    .place__decoration-1 {
+        left: 100%;
+        top: 17%;
+    }
+}
+
+@media screen and (max-width: 797px) {
+    .place__decoration-1 {
+        left: 50%;
+        top: 50%;
+    }
 }
 
 @keyframes imgSaturate {
     0% {
-        filter: saturate(0);
+        filter: saturate(0.5);
     }
 
     50% {
@@ -859,7 +912,7 @@ section {
     }
 
     100% {
-        filter: saturate(0);
+        filter: saturate(0.5);
     }
 }
 /* =================================================== story */
@@ -990,7 +1043,7 @@ section {
 
 /* =================================================== happy */
 .happy {
-    background: rgb(43, 43, 43);
+    background: rgb(26, 26, 26);
     position: relative;
 }
 
@@ -1293,19 +1346,20 @@ section {
 
 /* =================================================== dresscode */
 .dresscode {
-    background: #eee;
+    background: rgb(26, 26, 26);
     position: relative;
 }
 
 .dresscode .prev {
     text-align: center;
+    color: #fff;
 }
 
 .dresscode__title {
+    color: #fff;
     font-size: 4.5rem;
     text-align: center;
     margin-bottom: 4rem;
-    color: var(--color-dark);
 }
 
 .dresscode__box {
@@ -1322,6 +1376,8 @@ section {
 }
 
 .dresscode__item {
+    border: 1px solid #fff;
+    background: rgba(0, 0, 0, 0.6);
     height: -moz-fit-content;
     height: fit-content;
     flex: 1 1 300px;
@@ -1343,6 +1399,7 @@ section {
 
 .dresscode__desc {
     line-height: 30px;
+    color: #fff;
 }
 
 .dresscode__colors {
@@ -1352,12 +1409,6 @@ section {
 }
 
 @media screen and (max-width: 900px) {
-    .dresscode__colors {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 457px) {
     .dresscode__colors {
         grid-template-columns: 1fr;
     }
@@ -1403,9 +1454,20 @@ section {
 .dresscode__decoration-1 {
     position: absolute;
     width: 30%;
-    bottom: 0;
+    max-height: 500px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    transform: rotate(50deg);
+    bottom: -10rem;
     left: -10%;
-    filter: saturate(0);
+    filter: saturate(0) opacity(0.5);
+}
+
+@media screen and (max-width: 901px) {
+    .dresscode__decoration-1 {
+        max-height: 300px;
+        transform: rotate(110deg);
+    }
 }
 
 .dresscode__decoration-2 {
@@ -1468,6 +1530,7 @@ section {
 }
 
 .requests__item {
+    overflow: hidden;
     flex: 1 1 300px;
     position: relative;
     background: #eee;
@@ -1503,7 +1566,7 @@ section {
     transform: translate(-50%, -50%);
     font-size: 50rem;
     font-family: "mr_HamiltoneG", "Cormorant Garamond", sans-serif;
-    color: var(--color-primary);
+    color: #a39022;
     filter: opacity(0.1);
 }
 
@@ -1547,8 +1610,8 @@ section {
 }
 /* =================================================== pictures */
 .pictures {
-    background: #fff;
-    color: var(--color-dark);
+    background: rgb(26, 26, 26);
+    color: #fff;
 }
 
 .pictures__row {
@@ -1564,6 +1627,10 @@ section {
 
 .pictures__text {
     flex: 1 1 300px;
+}
+
+.pictures .prev {
+    color: #fff;
 }
 
 .pictures__title {
@@ -1595,15 +1662,16 @@ section {
     font-size: 1.5rem;
     padding: 1rem 2rem;
     background: var(--color-dark);
-    border: 10px solid var(--color-dark);
+    border: 3px solid var(--color-white);
     border-radius: 10px;
-    transition: all 100ms ease;
+    transition: all 120ms ease;
     font-weight: 700;
 }
 
 .pictures__btn:hover {
-    background: none;
-    color: var(--color-dark);
+    background: #fff;
+    border-color: #fff;
+    color: rgb(13, 13, 13);
 }
 
 .pictures__img {
@@ -1738,6 +1806,8 @@ section {
     transform: translateX(-50%);
     width: 40%;
     overflow: auto;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 1300px) {
@@ -1957,9 +2027,18 @@ section {
 /* =================================================== timer */
 .timer {
     padding: 5rem 0 10rem;
+    background: url("../images/timer-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.timer .prev {
+    color: #fff;
 }
 
 .timer__title {
+    color: #fff;
     font-size: 4.5rem;
     margin-bottom: 4rem;
     text-align: center;
@@ -2002,6 +2081,7 @@ section {
 }
 
 .timer__count {
+    font-family: "Poppins";
     font-size: 8rem;
     text-shadow: 0 0 10px #000;
 }
