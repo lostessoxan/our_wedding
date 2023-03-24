@@ -1484,42 +1484,25 @@ section {
 
 .dresscode__decoration-1 {
     position: absolute;
-    width: 30%;
+    width: 40%;
     max-height: 500px;
     -o-object-fit: contain;
     object-fit: contain;
-    transform: rotate(50deg);
-    bottom: -10rem;
-    left: -10%;
+    transform: scale(-1);
+    top: -8rem;
+    right: 0;
     filter: saturate(0) opacity(0.5);
 }
 
-@media screen and (max-width: 901px) {
+@media screen and (max-width: 1244px) {
     .dresscode__decoration-1 {
-        max-height: 300px;
-        transform: rotate(110deg);
+        top: -4rem;
     }
 }
 
-.dresscode__decoration-2 {
-    position: absolute;
-    width: 30%;
-    top: -10%;
-    right: -5%;
-    filter: saturate(0);
-    transform: rotate(-110deg);
-}
-
-@media screen and (max-width: 1335px) {
-    .dresscode__decoration-2 {
-        width: 24rem;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .dresscode__decoration-2 {
-        top: -5%;
-        width: 15rem;
+@media screen and (max-width: 1100px) {
+    .dresscode__decoration-1 {
+        width: 33rem;
     }
 }
 
@@ -1527,6 +1510,7 @@ section {
 .requests {
     padding: 35px 0 5.625rem;
     background: rgb(43, 43, 43);
+    position: relative;
 }
 
 .requests__line {
@@ -1580,6 +1564,7 @@ section {
 @media screen and (max-width: 940px) {
     .requests__item {
         margin: 0 auto;
+        flex: 1 1 auto;
         width: 70%;
     }
 }
@@ -1587,6 +1572,7 @@ section {
 @media screen and (max-width: 500px) {
     .requests__item {
         width: 94%;
+        flex: 1 1 auto;
     }
 }
 
@@ -1610,6 +1596,19 @@ section {
     line-height: 35px;
     display: flex;
     align-items: center;
+}
+
+.requests__dec1 {
+    position: absolute;
+    top: -5rem;
+    left: 0;
+    width: 40rem;
+}
+
+@media screen and (max-width: 550px) {
+    .requests__dec1 {
+        width: 30rem;
+    }
 }
 
 @keyframes moveLeft {
@@ -1797,7 +1796,7 @@ section {
 
 .survey__optimal {
     display: block;
-    font-size: 0.9rem;
+    font-size: 18px;
     width: 100%;
     max-width: 40rem;
     margin: 0 auto;
