@@ -2120,6 +2120,12 @@ section {
     }
 }
 
+@media screen and (max-width: 470px) {
+    .timer__time-section {
+        padding: 0;
+    }
+}
+
 .timer__time-section:last-child {
     border: none;
 }
@@ -2133,6 +2139,12 @@ section {
 @media screen and (max-width: 683px) {
     .timer__count {
         font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .timer__count {
+        font-size: 3rem;
     }
 }
 
@@ -2153,5 +2165,11 @@ section {
 @media screen and (max-width: 683px) {
     .timer__units {
         font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .timer__units {
+        font-size: 1.4rem;
     }
 }
