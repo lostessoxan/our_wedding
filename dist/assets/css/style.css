@@ -877,6 +877,14 @@ section {
     font-size: 1.2rem;
 }
 
+.place__desc span {
+    color: var(--color-primary);
+    display: inline-block;
+    margin-bottom: 0.2rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
 .place__time {
     font-size: 1.2rem;
     text-decoration: underline;
