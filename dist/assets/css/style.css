@@ -1403,7 +1403,6 @@ section {
 
 .dresscode__box {
     display: flex;
-    align-items: center;
     gap: 2rem;
     margin-bottom: 5rem;
 }
@@ -1417,8 +1416,6 @@ section {
 .dresscode__item {
     border: 1px solid #fff;
     background: rgba(0, 0, 0, 0.6);
-    height: -moz-fit-content;
-    height: fit-content;
     flex: 1 1 300px;
     padding: 1.5rem 2rem;
     border-radius: 5px;
@@ -1788,7 +1785,7 @@ section {
     text-align: center;
     border: 5px solid var(--color-dark);
     outline: 1px solid #fff;
-    transition: all 50ms ease;
+    transition: all 50ms linear;
 }
 
 @media screen and (max-width: 550px) {
@@ -1990,7 +1987,8 @@ section {
         cursor: pointer;
     }
 
-    .survey__modal-label input[type=checkbox], .survey__modal-label input[type=radio] {
+    .survey__modal-label input[type=checkbox],
+  .survey__modal-label input[type=radio] {
  /* IE */ /* FF */ /* Safari and Chrome */ /* Opera */
         transform: scale(1.6);
         padding: 10px;
